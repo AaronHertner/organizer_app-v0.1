@@ -79,6 +79,7 @@
 		CE30318324FF03AC00F74EA3 /* organizer_app */ = {
 			isa = PBXGroup;
 			children = (
+				CE3031A9250053C000F74EA3 /* Classes */,
 				CE3031A824FF040500F74EA3 /* Swift */,
 				CE3031A624FF03D800F74EA3 /* View Controllers */,
 				CE3031A724FF03E900F74EA3 /* Storyboards */,
@@ -121,6 +122,13 @@
 				CE30318624FF03AC00F74EA3 /* SceneDelegate.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		CE3031A9250053C000F74EA3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
