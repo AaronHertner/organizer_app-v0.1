@@ -14,6 +14,8 @@
 		CE30318E24FF03AE00F74EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30318D24FF03AE00F74EA3 /* Assets.xcassets */; };
 		CE30319124FF03AE00F74EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30318F24FF03AE00F74EA3 /* LaunchScreen.storyboard */; };
 		CE30319C24FF03AE00F74EA3 /* organizer_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30319B24FF03AE00F74EA3 /* organizer_appTests.swift */; };
+		CE3031AB2504508500F74EA3 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */; };
+		CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		CE30319724FF03AE00F74EA3 /* organizer_appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = organizer_appTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30319B24FF03AE00F74EA3 /* organizer_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = organizer_appTests.swift; sourceTree = "<group>"; };
 		CE30319D24FF03AE00F74EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
+		CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				CE30318824FF03AC00F74EA3 /* ViewController.swift */,
+				CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */,
+				CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 			files = (
 				CE30318924FF03AC00F74EA3 /* ViewController.swift in Sources */,
 				CE30318524FF03AC00F74EA3 /* AppDelegate.swift in Sources */,
+				CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */,
+				CE3031AB2504508500F74EA3 /* TaskTableViewController.swift in Sources */,
 				CE30318724FF03AC00F74EA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
