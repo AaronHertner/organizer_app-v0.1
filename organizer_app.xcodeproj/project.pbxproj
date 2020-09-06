@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		CE30318524FF03AC00F74EA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30318424FF03AC00F74EA3 /* AppDelegate.swift */; };
 		CE30318724FF03AC00F74EA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30318624FF03AC00F74EA3 /* SceneDelegate.swift */; };
-		CE30318924FF03AC00F74EA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30318824FF03AC00F74EA3 /* ViewController.swift */; };
+		CE30318924FF03AC00F74EA3 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30318824FF03AC00F74EA3 /* TaskViewController.swift */; };
 		CE30318C24FF03AC00F74EA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30318A24FF03AC00F74EA3 /* Main.storyboard */; };
 		CE30318E24FF03AE00F74EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE30318D24FF03AE00F74EA3 /* Assets.xcassets */; };
 		CE30319124FF03AE00F74EA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE30318F24FF03AE00F74EA3 /* LaunchScreen.storyboard */; };
 		CE30319C24FF03AE00F74EA3 /* organizer_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE30319B24FF03AE00F74EA3 /* organizer_appTests.swift */; };
 		CE3031AB2504508500F74EA3 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */; };
 		CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */; };
+		CE3031AF25048AED00F74EA3 /* ColorPickerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,7 +33,7 @@
 		CE30318124FF03AC00F74EA3 /* organizer_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = organizer_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE30318424FF03AC00F74EA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE30318624FF03AC00F74EA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE30318824FF03AC00F74EA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE30318824FF03AC00F74EA3 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		CE30318B24FF03AC00F74EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE30318D24FF03AE00F74EA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE30319024FF03AE00F74EA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		CE30319D24FF03AE00F74EA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +107,7 @@
 		CE3031A624FF03D800F74EA3 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE30318824FF03AC00F74EA3 /* ViewController.swift */,
+				CE30318824FF03AC00F74EA3 /* TaskViewController.swift */,
 				CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */,
 				CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */,
 			);
@@ -133,6 +135,7 @@
 		CE3031A9250053C000F74EA3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -238,7 +241,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE30318924FF03AC00F74EA3 /* ViewController.swift in Sources */,
+				CE30318924FF03AC00F74EA3 /* TaskViewController.swift in Sources */,
+				CE3031AF25048AED00F74EA3 /* ColorPickerControl.swift in Sources */,
 				CE30318524FF03AC00F74EA3 /* AppDelegate.swift in Sources */,
 				CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */,
 				CE3031AB2504508500F74EA3 /* TaskTableViewController.swift in Sources */,

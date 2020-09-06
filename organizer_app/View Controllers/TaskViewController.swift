@@ -9,18 +9,21 @@
 import UIKit
 import os.log
 
-class ExpandedTaskViewController: UIViewController, UITextFieldDelegate {
+class TaskViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var taskLabel : UILabel!                     //task label
     @IBOutlet weak var taskNameTextField : UITextField!         //text field for task name
-    @IBOutlet weak var taskDetailsTextFIeld : UITextField!      //text field for task details
+    @IBOutlet weak var taskDetailsTextField: UITextField!
+    
+    //MARK: Properties
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         taskNameTextField.delegate = self
+        
     }
     
     //MARK: UITextFieldDelegate
