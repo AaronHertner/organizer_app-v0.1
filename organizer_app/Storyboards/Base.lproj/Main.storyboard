@@ -23,24 +23,48 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod ..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-6x-SrO">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14R-WG-WCe">
+                                            <rect key="frame" x="109" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod ..." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smn-6x-SrO">
                                             <rect key="frame" x="109" y="34" width="240" height="60"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                             <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14R-WG-WCe">
-                                            <rect key="frame" x="109" y="11" width="42" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <view autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="mBR-2l-BZ9">
+                                            <rect key="frame" x="20" y="24" width="58" height="57"/>
+                                            <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="57" id="Fhp-sd-rRN"/>
+                                                <constraint firstAttribute="width" constant="58" id="qxW-Ms-97r"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mBR-2l-BZ9" secondAttribute="bottom" constant="13" id="857-2n-Qrv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Smn-6x-SrO" secondAttribute="trailing" constant="45" id="Awd-SV-b8p"/>
+                                        <constraint firstItem="mBR-2l-BZ9" firstAttribute="top" secondItem="HLP-9r-2FR" secondAttribute="topMargin" constant="13" id="CQ8-XX-x7q"/>
+                                        <constraint firstItem="Smn-6x-SrO" firstAttribute="leading" secondItem="mBR-2l-BZ9" secondAttribute="trailing" constant="31" id="LKx-cj-aJl"/>
+                                        <constraint firstItem="mBR-2l-BZ9" firstAttribute="leading" secondItem="HLP-9r-2FR" secondAttribute="leadingMargin" id="LiL-a8-Dho"/>
+                                        <constraint firstItem="14R-WG-WCe" firstAttribute="leading" secondItem="mBR-2l-BZ9" secondAttribute="trailing" constant="31" id="MMF-2P-I5C"/>
+                                        <constraint firstItem="14R-WG-WCe" firstAttribute="leading" secondItem="mBR-2l-BZ9" secondAttribute="trailing" constant="31" id="MPd-a7-jwD"/>
+                                        <constraint firstItem="14R-WG-WCe" firstAttribute="top" secondItem="HLP-9r-2FR" secondAttribute="topMargin" id="NyK-yt-y8C"/>
+                                        <constraint firstItem="Smn-6x-SrO" firstAttribute="bottom" secondItem="HLP-9r-2FR" secondAttribute="bottomMargin" id="SNx-El-Isg"/>
+                                        <constraint firstItem="Smn-6x-SrO" firstAttribute="top" secondItem="14R-WG-WCe" secondAttribute="bottom" constant="2" id="axP-K8-dbs"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="14R-WG-WCe" secondAttribute="trailing" constant="243" id="cED-99-gBf"/>
+                                        <constraint firstItem="mBR-2l-BZ9" firstAttribute="leading" secondItem="HLP-9r-2FR" secondAttribute="leadingMargin" id="fSl-dw-LDP"/>
+                                        <constraint firstItem="mBR-2l-BZ9" firstAttribute="centerY" secondItem="HLP-9r-2FR" secondAttribute="centerY" id="fbW-ak-X5n"/>
+                                        <constraint firstItem="mBR-2l-BZ9" firstAttribute="top" secondItem="HLP-9r-2FR" secondAttribute="topMargin" constant="13" id="q4V-rK-lwf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="taskColor" destination="mBR-2l-BZ9" id="Cfa-1z-rhu"/>
+                                    <outlet property="taskDescription" destination="Smn-6x-SrO" id="U8N-2x-l7G"/>
                                     <outlet property="taskTitle" destination="14R-WG-WCe" id="FFq-BW-Zrb"/>
                                 </connections>
                             </tableViewCell>
@@ -78,12 +102,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Enter Task Details" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LPN-Hz-Ra3">
-                                        <rect key="frame" x="0.0" y="74.5" width="374" height="536.5"/>
+                                        <rect key="frame" x="0.0" y="74.5" width="374" height="504.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="S3A-e4-Jql" customClass="ColorPickerControl" customModule="organizer_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="621" width="374" height="12"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="orW-0w-KIk" customClass="ColorPickerControl" customModule="organizer_app" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="589" width="374" height="44"/>
                                     </stackView>
                                 </subviews>
                             </stackView>

@@ -13,6 +13,7 @@ class TaskTableViewCell: UITableViewCell {
     //MARK: Properties
     @IBOutlet weak var taskTitle : UILabel!
     @IBOutlet weak var taskDescription : UITextView!
+    @IBOutlet weak var taskColor : UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()

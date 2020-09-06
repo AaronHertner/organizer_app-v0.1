@@ -17,6 +17,8 @@
 		CE3031AB2504508500F74EA3 /* TaskTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */; };
 		CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */; };
 		CE3031AF25048AED00F74EA3 /* ColorPickerControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */; };
+		CE3031B125059A3F00F74EA3 /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031B025059A3F00F74EA3 /* ColorCollectionViewCell.swift */; };
+		CE3031B32505A9B400F74EA3 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3031B22505A9B400F74EA3 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewController.swift; sourceTree = "<group>"; };
 		CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerControl.swift; sourceTree = "<group>"; };
+		CE3031B025059A3F00F74EA3 /* ColorCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE3031B22505A9B400F74EA3 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,7 @@
 				CE30318824FF03AC00F74EA3 /* TaskViewController.swift */,
 				CE3031AA2504508500F74EA3 /* TaskTableViewController.swift */,
 				CE3031AC2504517C00F74EA3 /* TaskTableViewCell.swift */,
+				CE3031B025059A3F00F74EA3 /* ColorCollectionViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				CE3031AE25048AED00F74EA3 /* ColorPickerControl.swift */,
+				CE3031B22505A9B400F74EA3 /* Task.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -241,7 +247,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3031B32505A9B400F74EA3 /* Task.swift in Sources */,
 				CE30318924FF03AC00F74EA3 /* TaskViewController.swift in Sources */,
+				CE3031B125059A3F00F74EA3 /* ColorCollectionViewCell.swift in Sources */,
 				CE3031AF25048AED00F74EA3 /* ColorPickerControl.swift in Sources */,
 				CE30318524FF03AC00F74EA3 /* AppDelegate.swift in Sources */,
 				CE3031AD2504517C00F74EA3 /* TaskTableViewCell.swift in Sources */,
