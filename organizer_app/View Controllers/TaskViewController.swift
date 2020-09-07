@@ -17,7 +17,7 @@ class TaskViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var taskDetailsTextField: UITextField!
     
     //MARK: Properties
-    
+    let task: Task?
     
     override func viewDidLoad() {
         super.viewDidLoad()

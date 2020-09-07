@@ -18,6 +18,12 @@ class TaskTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        taskColor.layer.cornerRadius = taskColor.frame.width / 2
+        taskColor.clipsToBounds = true
+        
+        taskDescription.textContainer.maximumNumberOfLines = 3
+        taskDescription.textContainer.lineBreakMode = .byTruncatingTail
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
