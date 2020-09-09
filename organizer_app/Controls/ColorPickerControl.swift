@@ -43,13 +43,17 @@ import UIKit
         //user deselects button
         if button.backgroundColor == selectedColor {
             selectedColor = nil
-            button.alpha = 1.0
-        }else{
             for button in colorButtonsArr{
                 button.alpha = 1.0
             }
+        }
+        //user selects button
+        else{
+            for button in colorButtonsArr{
+                button.alpha = 0.2
+            }
             selectedColor = button.backgroundColor
-            button.alpha = 0.3
+            button.alpha = 1.0
         }
     }
     

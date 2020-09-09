@@ -24,6 +24,8 @@ class TaskTableViewCell: UITableViewCell {
         
         taskDescription.textContainer.maximumNumberOfLines = 3
         taskDescription.textContainer.lineBreakMode = .byTruncatingTail
+        
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
