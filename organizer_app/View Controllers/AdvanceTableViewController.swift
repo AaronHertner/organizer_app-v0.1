@@ -21,6 +21,7 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
     //save function called on exit from segue
     @IBAction func unwindToTaskList(sender: UIStoryboardSegue){
         
+        //check that the previous controller was a taskViewController
         if let sourceViewController = sender.source as? TaskViewController, let task = sourceViewController.task{
             let indexPath = IndexPath(row: tasks.count, section: 0)
             tasks.append(task)
