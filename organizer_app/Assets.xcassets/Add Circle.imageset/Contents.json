@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "baseline_add_white_24dp.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
