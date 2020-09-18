@@ -13,9 +13,14 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
     //MARK: Properties
     var tasks = [Task]()
     
+    var addButtonDest: CGPoint!
+    var editButtonDest: CGPoint!
+    
     //MARK: Outlets
     @IBOutlet weak var taskTableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var moreButton: UIButton!
     
     //MARK: Actions
     //save function called on exit from segue
@@ -29,22 +34,49 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    @IBAction func moreButtonClicked(_ sender: UIButton){
+        if(addButton.center == moreButton.center){
+            UIView.animate(withDuration: 0.2, animations: {
+                self.addButton.center = self.addButtonDest
+                self.editButton.center = self.editButtonDest
+            })
+        }else{
+            UIView.animate(withDuration: 0.2, animations: {
+                self.addButton.center = self.moreButton.center
+                self.editButton.center = self.moreButton.center
+            })
+        }
+    }
+    
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         taskTableView.dataSource = self
         loadSampleTasks()
         
-        //stylize add button
-        addButton.backgroundColor = AppDelegate.primaryColor
-        addButton.layer.cornerRadius = addButton.frame.width / 2
-        addButton.layer.shadowOpacity = 0.25
-        addButton.layer.shadowRadius = 5
-        addButton.layer.shadowOffset = CGSize.init(width: 0, height: 10)
+        //stylize buttons
+        stylizeButton(button: moreButton)
+        stylizeButton(button: addButton)
+        stylizeButton(button: editButton)
         
+        //store original button points
+        addButtonDest = addButton.center
+        editButtonDest = editButton.center
+        
+        //move buttons to default position
+        addButton.center = moreButton.center
+        editButton.center = moreButton.center
     }
     
     //MARK: Private Functions
+    private func stylizeButton(button: UIButton){
+        button.backgroundColor = AppDelegate.primaryColor
+        button.layer.cornerRadius = button.frame.width / 2
+        button.layer.shadowOpacity = 0.25
+        button.layer.shadowRadius = 5
+        button.layer.shadowOffset = CGSize.init(width: 0, height: 10)
+    }
+    
     private func loadSampleTasks(){
          
         //init tasks
@@ -59,6 +91,17 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
     }
     
     //MARK: TableView Functions
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete{
+            tasks.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
         

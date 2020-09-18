@@ -74,13 +74,28 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-Wf-zXc">
-                                <rect key="frame" x="316" y="783" width="80" height="80"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTq-4v-gxu">
+                                <rect key="frame" x="327" y="691" width="56" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="Add Circle"/>
                                 <connections>
-                                    <segue destination="RZk-Wa-fzo" kind="show" id="Qld-on-ydV"/>
+                                    <segue destination="RZk-Wa-fzo" kind="presentation" id="rcZ-LF-Ve8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHY-O8-5pM">
+                                <rect key="frame" x="327" y="604" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="Trash Can"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-Wf-zXc">
+                                <rect key="frame" x="316" y="783" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="Hamburger Menu"/>
+                                <connections>
+                                    <action selector="moreButtonClicked:" destination="15S-ri-akN" eventType="touchUpInside" id="b8k-Sl-axm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,13 +110,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="dFt-KC-qhO"/>
                     <connections>
-                        <outlet property="addButton" destination="YWi-Wf-zXc" id="kA7-Y4-qFQ"/>
+                        <outlet property="addButton" destination="kTq-4v-gxu" id="jhc-qd-Y6f"/>
+                        <outlet property="editButton" destination="sHY-O8-5pM" id="kaK-hY-Mo8"/>
+                        <outlet property="moreButton" destination="YWi-Wf-zXc" id="nDs-TZ-Tkb"/>
                         <outlet property="taskTableView" destination="aAF-ak-KJG" id="b1K-s5-UXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGg-2E-3dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1277" y="96"/>
+            <point key="canvasLocation" x="1276.8115942028987" y="95.758928571428569"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -192,6 +209,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Add Circle" width="48" height="48"/>
+        <image name="Add Circle" width="36" height="36"/>
+        <image name="Hamburger Menu" width="48" height="48"/>
+        <image name="Trash Can" width="36" height="36"/>
     </resources>
 </document>
