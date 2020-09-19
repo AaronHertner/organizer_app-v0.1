@@ -80,6 +80,7 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="Add Circle"/>
                                 <connections>
+                                    <action selector="hideAllAfterAddClick:" destination="15S-ri-akN" eventType="touchUpInside" id="bU8-rO-W1M"/>
                                     <segue destination="RZk-Wa-fzo" kind="presentation" id="rcZ-LF-Ve8"/>
                                 </connections>
                             </button>
@@ -88,6 +89,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" image="Trash Can"/>
+                                <connections>
+                                    <action selector="enableEditing:" destination="15S-ri-akN" eventType="touchUpInside" id="gxk-Rg-d0W"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWi-Wf-zXc">
                                 <rect key="frame" x="316" y="783" width="80" height="80"/>
@@ -98,8 +102,18 @@
                                     <action selector="moreButtonClicked:" destination="15S-ri-akN" eventType="touchUpInside" id="b8k-Sl-axm"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUM-04-Mny">
+                                <rect key="frame" x="21" y="780" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" image="Check Mark"/>
+                                <connections>
+                                    <action selector="confirmEdits:" destination="15S-ri-akN" eventType="touchUpInside" id="6dx-ra-WJQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="aAF-ak-KJG" firstAttribute="top" secondItem="SKh-8x-tT9" secondAttribute="top" id="AhO-tY-9p9"/>
                             <constraint firstItem="aAF-ak-KJG" firstAttribute="bottom" secondItem="r0b-bA-cQe" secondAttribute="bottom" constant="34" id="cVW-nK-fXs"/>
@@ -111,14 +125,16 @@
                     <navigationItem key="navigationItem" id="dFt-KC-qhO"/>
                     <connections>
                         <outlet property="addButton" destination="kTq-4v-gxu" id="jhc-qd-Y6f"/>
+                        <outlet property="confirmButton" destination="eUM-04-Mny" id="Tch-lK-ZQL"/>
                         <outlet property="editButton" destination="sHY-O8-5pM" id="kaK-hY-Mo8"/>
                         <outlet property="moreButton" destination="YWi-Wf-zXc" id="nDs-TZ-Tkb"/>
+                        <outlet property="myTable" destination="aAF-ak-KJG" id="pay-eQ-PHW"/>
                         <outlet property="taskTableView" destination="aAF-ak-KJG" id="b1K-s5-UXe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGg-2E-3dw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1276.8115942028987" y="95.758928571428569"/>
+            <point key="canvasLocation" x="2186.9565217391305" y="95.758928571428569"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -186,7 +202,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="0fx-sw-ZSw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3034.7826086956525" y="95.758928571428569"/>
+            <point key="canvasLocation" x="3944.9275362318845" y="95.758928571428569"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KkC-QA-4fH">
@@ -205,11 +221,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YhE-lb-BCB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2149" y="-207"/>
+            <point key="canvasLocation" x="3057.971014492754" y="-207.58928571428569"/>
         </scene>
     </scenes>
     <resources>
         <image name="Add Circle" width="36" height="36"/>
+        <image name="Check Mark" width="48" height="48"/>
         <image name="Hamburger Menu" width="48" height="48"/>
         <image name="Trash Can" width="36" height="36"/>
     </resources>

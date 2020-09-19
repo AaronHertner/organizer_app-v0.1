@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AdvanceTableViewController: UIViewController, UITableViewDataSource {
+class AdvanceTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Properties
     var tasks = [Task]()
@@ -21,6 +21,8 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var moreButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var myTable: UITableView!
     
     //MARK: Actions
     //save function called on exit from segue
@@ -32,6 +34,12 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
             tasks.append(task)
             taskTableView.insertRows(at: [indexPath], with: .automatic)
         }
+    }
+    
+    @IBAction func hideAllAfterAddClick(_ sender: UIButton){
+        moreButtonClicked(moreButton) //collapse menu
+        if(!confirmButton.isHidden){confirmButton.isHidden = true}  //hide confirm button
+        if(myTable.isEditing){myTable.setEditing(false, animated: false)}   //end editing
     }
     
     @IBAction func moreButtonClicked(_ sender: UIButton){
@@ -48,6 +56,22 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
         }
     }
     
+    @IBAction func enableEditing(_ sender: UIButton){
+        if(myTable.isEditing){
+            myTable.setEditing(false, animated: true)
+            confirmButton.isHidden = true
+        }else{
+            myTable.setEditing(true, animated: true)
+            moreButtonClicked(moreButton)   //collapse menu
+            confirmButton.isHidden = false
+        }
+    }
+    
+    @IBAction func confirmEdits(_ sender: UIButton){
+        myTable.setEditing(false, animated: true)
+        confirmButton.isHidden = true
+    }
+    
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +82,7 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource {
         stylizeButton(button: moreButton)
         stylizeButton(button: addButton)
         stylizeButton(button: editButton)
+        stylizeButton(button: confirmButton)
         
         //store original button points
         addButtonDest = addButton.center
