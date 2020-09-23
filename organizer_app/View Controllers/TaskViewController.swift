@@ -9,21 +9,21 @@
 import UIKit
 import os.log
 
-class TaskViewController: UIViewController, UITextFieldDelegate {
+class TaskViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     //MARK: Properties
     var task: Task? = nil      //used for sending filled task data to table view
     
     //MARK: Outlets
     @IBOutlet weak var taskLabel : UILabel!                     //task label
     @IBOutlet weak var taskNameTextField : UITextField!         //text field for task name
-    @IBOutlet weak var taskDetailsTextField: UITextField!       //text field for task details
+    @IBOutlet weak var taskDetailsTextField: UITextView!       //text field for task details
     @IBOutlet weak var taskColorPicker: ColorPickerControl!
     @IBOutlet weak var cancelButton: UIBarButtonItem!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     //MARK: Actions
     @IBAction func cancelButton(_ sender: UIBarButtonItem) {
-        let presentingFromAdd = presentingViewController is AdvanceTableViewController
+        let presentingFromAdd = presentingViewController is UINavigationController
         
         /*
          depending on how the page was presented
@@ -38,7 +38,8 @@ class TaskViewController: UIViewController, UITextFieldDelegate {
         
         //removes scene from navigation stack
         else if let owningNavigationController = navigationController{
-            owningNavigationController.popViewController(animated: true)
+            owningNavigationController.setNavigationBarHidden(true, animated: false)    //hide navigation bar
+            owningNavigationController.popViewController(animated: true)                //return to task list
         }
         
         else{
@@ -51,7 +52,30 @@ class TaskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         taskNameTextField.delegate = self
+        taskDetailsTextField.delegate = self
         
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
+        //clear text fields enabled
+        taskNameTextField.clearsOnBeginEditing = true
+        
+        /*
+         check if task property is non nil
+         if it is not, then we prepare for editing details
+         */
+        if let task = task{
+            taskLabel.text = "Edit Task"
+            taskNameTextField.text = task.taskName
+            taskDetailsTextField.text = task.taskDescription
+            taskDetailsTextField.textColor = UIColor.black
+            taskColorPicker.selectedColor = task.taskColor
+        }
+    }
+    
+    //MARK: UITextViewDelegate
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        textView.text = ""
+        textView.textColor = UIColor.black
     }
     
     //MARK: UITextFieldDelegate
@@ -61,7 +85,6 @@ class TaskViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField){
-        taskLabel.text = taskNameTextField.text
     }
 
     //MARK: Navigation

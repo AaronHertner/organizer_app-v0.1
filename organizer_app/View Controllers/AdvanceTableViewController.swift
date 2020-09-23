@@ -72,11 +72,26 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource, UITab
         confirmButton.isHidden = true
     }
     
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if(segue.identifier == "EditTask"){
+            let taskDetailView = segue.destination as? TaskViewController   //destination
+            let selectedCell = sender as? TaskTableViewCell                 //selected cell
+            let indexPath = myTable.indexPath(for: selectedCell!)           //position of cell
+            let selectedTask = tasks[indexPath!.row]                        //get the task info
+            taskDetailView?.task = selectedTask                             //give task info to detail view
+        }
+    }
+    
     //MARK: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         taskTableView.dataSource = self
         loadSampleTasks()
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         //stylize buttons
         stylizeButton(button: moreButton)

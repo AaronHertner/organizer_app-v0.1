@@ -12,7 +12,18 @@ import UIKit
 
     //MARK: Properties
     private var colorButtonsArr = [UIButton]()
-    public var selectedColor : UIColor?
+    public var selectedColor : UIColor?{
+        didSet{
+            for button in colorButtonsArr{
+                if(button.backgroundColor?.cgColor != selectedColor?.cgColor){
+                    button.alpha = 0.2
+                }
+                else{
+                    button.alpha = 1.0
+                }
+            }
+        }
+    }
     
     //Color Array
     private var colorArr : [UIColor] = [
@@ -38,23 +49,8 @@ import UIKit
     }
     
     //MARK: Private Methods
-    @objc private func buttonTapped(button: UIButton){
-        
-        //user deselects button
-        if button.backgroundColor == selectedColor {
-            selectedColor = nil
-            for button in colorButtonsArr{
-                button.alpha = 1.0
-            }
-        }
-        //user selects button
-        else{
-            for button in colorButtonsArr{
-                button.alpha = 0.2
-            }
-            selectedColor = button.backgroundColor
-            button.alpha = 1.0
-        }
+    @objc func buttonTapped(button: UIButton){
+        selectedColor = button.backgroundColor
     }
     
     private func setupButtons(){
