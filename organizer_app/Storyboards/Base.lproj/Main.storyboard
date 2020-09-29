@@ -145,20 +145,20 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TaskViewController" customModule="organizer_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="SAx-SZ-Svj">
-                                <rect key="frame" x="20" y="103" width="374" height="589"/>
+                                <rect key="frame" x="20" y="71" width="374" height="567"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04x-Jp-dk0">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="42.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Task Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-gU-Vht">
-                                        <rect key="frame" x="0.0" y="52.5" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="30.5" width="374" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="3Wl-RG-uVc"/>
                                         </constraints>
@@ -166,7 +166,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" text="Enter Task Details" translatesAutoresizingMaskIntoConstraints="NO" id="xNU-Dk-Vgl">
-                                        <rect key="frame" x="0.0" y="102.5" width="374" height="432.5"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="374" height="432.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="432.5" id="ZID-pm-aoa"/>
@@ -177,7 +177,7 @@
                                         <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                     </textView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="orW-0w-KIk" customClass="ColorPickerControl" customModule="organizer_app" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="545" width="374" height="44"/>
+                                        <rect key="frame" x="0.0" y="523" width="374" height="44"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -257,7 +257,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bNX-aT-uxn"/>
+        <segue reference="RJ1-Xt-MMk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Add Circle" width="36" height="36"/>

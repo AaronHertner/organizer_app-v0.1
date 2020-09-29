@@ -28,11 +28,22 @@ class AdvanceTableViewController: UIViewController, UITableViewDataSource, UITab
     //save function called on exit from segue
     @IBAction func unwindToTaskList(sender: UIStoryboardSegue){
         
+        //if navigation bar is enabled - disable it
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
         //check that the previous controller was a taskViewController
         if let sourceViewController = sender.source as? TaskViewController, let task = sourceViewController.task{
-            let indexPath = IndexPath(row: tasks.count, section: 0)
-            tasks.append(task)
-            taskTableView.insertRows(at: [indexPath], with: .automatic)
+            
+            //handle edit path
+            if let selectedIndexPath = myTable.indexPathForSelectedRow{
+                tasks[selectedIndexPath.row] = task
+                myTable.reloadData()
+            }
+            else{
+                let indexPath = IndexPath(row: tasks.count, section: 0)
+                tasks.append(task)
+                taskTableView.insertRows(at: [indexPath], with: .automatic)
+            }
         }
     }
     
